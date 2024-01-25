@@ -6,6 +6,7 @@ $user_id = $_GET['userid'];
 $query = "SELECT * FROM users1 WHERE user_id = $user_id";
 $user = mysqli_fetch_assoc(mysqli_query($sql_con, $query));
 
+//Change mo lang yung ORDER BY date DESC to ORDER BY id DESC
 // get user previous billing
 $query = "SELECT * FROM bill WHERE owners_id = $user_id ORDER BY id DESC";
 $result = mysqli_query($sql_con, $query);
