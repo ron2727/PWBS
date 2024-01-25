@@ -100,6 +100,7 @@ $query = "SELECT * FROM users1 WHERE unique_id = " . $_GET['userid'];
 $user = mysqli_fetch_assoc(mysqli_query($sql_con, $query));
 $user_id = $user['user_id'];
 
+//Change mo lang yung ORDER BY date DESC to ORDER BY id DESC
 $query = "SELECT * FROM bill WHERE owners_id = $user_id ORDER BY id DESC";
 $result = mysqli_query($sql_con, $query);
 $bill = mysqli_fetch_assoc($result);
